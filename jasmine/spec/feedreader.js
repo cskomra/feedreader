@@ -32,7 +32,7 @@ $(function() {
          * and that the URL is not empty. (#8)
          */
         it('have URLs that are not empty', function() {
-            for( var i = 0; i < allFeeds.length; i++) {
+            for (var i = 0; i < allFeeds.length; i++) {
                 var feedURL = allFeeds[i].url;
                 expect(feedURL).toBeDefined();
                 expect(feedURL).not.toBe(null);
@@ -45,7 +45,7 @@ $(function() {
          * and that the name is not empty. (#9)
          */
         it('have names that are not empty', function() {
-            for( var i = 0; i < allFeeds.length; i++) {
+            for (var i = 0; i < allFeeds.length; i++) {
                 var feedName = allFeeds[i].name;
                 expect(feedName).toBeDefined();
                 expect(feedName).not.toBe(null);
@@ -77,9 +77,9 @@ $(function() {
                 numClicks++;
             });
 
-            if(numClicks % 2 == 0) {  //numClicks is even and menu is hidden
+            if (numClicks % 2 == 0) {  //numClicks is even and menu is hidden
                 expect($('body').attr('class')).toBe('menu-hidden');
-            }else{  //numClicks is odd and menu is displayed
+            } else {  //numClicks is odd and menu is displayed
                 expect($('body').attr('class')).toBe(null);
             }
         });
@@ -131,4 +131,4 @@ $(function() {
             done(); //the function has completed
         });
     });
-}());
+}())
