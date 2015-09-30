@@ -53,7 +53,6 @@ $(function() {
         });
     });
 
-
     /* TODO: Write a new test suite named "The menu" (#10)*/
     describe('The menu', function() {
 
@@ -78,16 +77,13 @@ $(function() {
                 numClicks++;
             });
 
-            if(numClicks % 2 == 0) {
-                //numClicks is even and menu is hidden
+            if(numClicks % 2 == 0) {  //numClicks is even and menu is hidden
                 expect($('body').attr('class')).toBe('menu-hidden');
-            }else{
-                //numClicks is odd and menu is displayed
+            }else{  //numClicks is odd and menu is displayed
                 expect($('body').attr('class')).toBe(null);
             }
         });
     });
-
 
     /* TODO: Write a new test suite named "Initial Entries" (#13)*/
     describe('Initial Entries', function() {
@@ -98,7 +94,6 @@ $(function() {
          * Remember, loadFeed() is asynchronous so this test wil require
          * the use of Jasmine's beforeEach and asynchronous done() function. (#14)
          */
-        //loadFeed() is asynchronous
 
         beforeEach(function(done) {
             loadFeed(0, function() { //async function
@@ -122,14 +117,14 @@ $(function() {
          * Remember, loadFeed() is asynchronous. (#16)
          */
 
-         //expect container before loadFeed to not be container after loadFeed
-         var container = $('.feed');
-         beforeEach(function(done) {
+        beforeEach(function(done) {
             loadFeed(0, function() { //async function
                 done();  //signals to the framework...
             });
         });
 
+        //expect container before loadFeed to not be container after loadFeed
+        var container = $('.feed');
         it('actually changes container content', function(done) {
             //get new .feed container; check against previous container
             expect($('.feed')).not.toBe(container);
