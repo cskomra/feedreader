@@ -1,7 +1,7 @@
 ## Using Feedreader
-Feedreader is a web-based application that reads RSS feeds.
+Feedreader is a web-based application that loads RSS feeds so that you can read them.
 
-Open the [index.html](http://cskomra.github.io/feedreader/index.html) file to begin using Feedreader.  
+Open the [index.html](http://cskomra.github.io/projects/feedreader/index.html) file to begin using Feedreader.  
 
 - Basic Functionality
 	- Click the hamburger menu to view a list of available feeds
